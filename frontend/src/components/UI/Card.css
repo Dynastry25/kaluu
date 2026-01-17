@@ -1,0 +1,78 @@
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--light-gray);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary);
+}
+
+.card-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--light-gray);
+  background: linear-gradient(135deg, var(--light) 0%, #fff 100%);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-footer {
+  padding: 20px;
+  border-top: 1px solid var(--light-gray);
+  background: #F9FAFB;
+}
+
+/* Card variants */
+.card-primary {
+  border-top: 4px solid var(--primary);
+}
+
+.card-secondary {
+  border-top: 4px solid var(--secondary);
+}
+
+.card-accent {
+  border-top: 4px solid var(--accent);
+}
+
+.card-success {
+  border-top: 4px solid #10B981;
+}
+
+.card-warning {
+  border-top: 4px solid #F59E0B;
+}
+
+.card-info {
+  border-top: 4px solid #3B82F6;
+}
+
+/* Card with gradient header */
+.card-gradient .card-header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: white;
+}
+
+.card-gradient.card-primary .card-header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.card-gradient.card-secondary .card-header {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: 15px;
+  }
+}

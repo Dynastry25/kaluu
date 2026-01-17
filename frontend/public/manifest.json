@@ -1,0 +1,26 @@
+{
+  "short_name": "USCF TAKWIMU",
+  "name": "USCF CCT TAKWIMU - Jumuiya ya Wanafunzi wa Kikristo",
+  "description": "Jumuiya ya Wanafunzi wa Kikristo katika Chuo cha Takwimu Mashariki mwa Afrika",
+  "icons": [
+    {
+      "src": "public/logo.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "public/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

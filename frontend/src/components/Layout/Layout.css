@@ -1,0 +1,51 @@
+/* src/components/Layout/Layout.css - Updated */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, 
+    rgba(255, 251, 247, 0.3) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.main-content {
+  flex: 1;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.main-content::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,25 50,50 T100,50" stroke="rgba(255,107,0,0.02)" fill="none"/></svg>');
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Page transition effects */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
