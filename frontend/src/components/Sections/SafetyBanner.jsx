@@ -150,10 +150,6 @@ const SafetyBanner = () => {
         <div className="safety-banner-content">
           {/* Header Section */}
           <div className="safety-header">
-            <div className="safety-badge">
-              <Shield size={20} />
-              <span>{language === 'en' ? 'Certified Safety' : 'Usalama Uliothibitishwa'}</span>
-            </div>
             <h2>{trans.title}</h2>
             <p className="safety-subtitle">{trans.subtitle}</p>
             <p className="safety-description">{trans.description}</p>
@@ -162,9 +158,6 @@ const SafetyBanner = () => {
               <Button variant="primary" size="medium">
                 {trans.ctaPrimary}
               </Button>
-              <Button variant="secondary" size="medium">
-                {trans.ctaSecondary}
-              </Button>
               <a href="#emergency" className="safety-link">
                 <AlertTriangle size={16} />
                 {trans.viewProtocols}
@@ -172,33 +165,7 @@ const SafetyBanner = () => {
             </div>
           </div>
           
-          {/* Stats Grid with Enhanced Design */}
-          <div className="safety-stats-grid">
-            {safetyStats.map((stat, index) => (
-              <div 
-                key={index} 
-                className={`safety-stat ${stat.color} ${stat.animation}`}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="stat-icon-wrapper">
-                  <div className="stat-icon">
-                    {stat.icon}
-                  </div>
-                  <div className="stat-glow"></div>
-                </div>
-                <div className="stat-content">
-                  <div className="stat-number">{stat.number}</div>
-                  <div className="stat-label">{stat.label}</div>
-                  <div className="stat-period">{stat.period}</div>
-                </div>
-                <div className="stat-hover">
-                  <TrendingUp size={16} />
-                  <span>{language === 'en' ? 'View Details' : 'Angalia Maelezo'}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+   
           
           {/* Certifications Section */}
           <div className="safety-certifications-section">

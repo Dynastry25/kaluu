@@ -2,25 +2,29 @@
   background: var(--dark);
   color: white;
   padding: 60px 0 20px;
+  overflow: hidden;
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   gap: 40px;
   margin-bottom: 40px;
 }
+
 .footer-logo {
   max-width: 200px;
   height: auto;
 }
 
+/* Tablet (≥768px) */
 @media (min-width: 768px) {
   .footer-content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Desktop (≥1024px) */
 @media (min-width: 1024px) {
   .footer-content {
     grid-template-columns: repeat(4, 1fr);
@@ -28,13 +32,7 @@
 }
 
 .footer-brand {
-  grid-column: 1 / -1;
-}
-
-@media (min-width: 1024px) {
-  .footer-brand {
-    grid-column: span 1;
-  }
+  grid-column: span 1;
 }
 
 .footer .logo {
@@ -45,6 +43,7 @@
   color: #CBD5E0;
   margin-bottom: 20px;
   line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .social-links {
@@ -74,7 +73,7 @@
 }
 
 .footer-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 20px;
   color: white;
   position: relative;
@@ -105,6 +104,7 @@
   color: #CBD5E0;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-size: 0.95rem;
 }
 
 .footer-link:hover {
@@ -123,29 +123,46 @@
   align-items: center;
   gap: 10px;
   color: #CBD5E0;
+  font-size: 0.95rem;
 }
 
 .newsletter p {
   margin-bottom: 10px;
   color: #CBD5E0;
+  font-size: 0.95rem;
 }
 
 .newsletter-form {
   display: flex;
-  gap: 8px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Tablet and up: horizontal form */
+@media (min-width: 768px) {
+  .newsletter-form {
+    flex-direction: row;
+  }
 }
 
 .newsletter-form input {
   flex: 1;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
   color: white;
   border-radius: 4px;
+  font-size: 0.95rem;
 }
 
 .newsletter-form input::placeholder {
   color: #CBD5E0;
+  font-size: 0.9rem;
+}
+
+.newsletter-form .btn {
+  white-space: nowrap;
+  padding: 12px 20px;
 }
 
 .footer-bottom {
@@ -173,17 +190,30 @@
   justify-content: center;
 }
 
+@media (min-width: 768px) {
+  .certifications {
+    justify-content: flex-start;
+  }
+}
+
 .cert-badge {
   background: rgba(255, 255, 255, 0.1);
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
 }
 
 .copyright {
   color: #CBD5E0;
-  font-size: 14px;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .copyright {
+    text-align: left;
+  }
 }
 
 .copyright p {

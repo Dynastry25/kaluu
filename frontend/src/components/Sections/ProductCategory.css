@@ -1,4 +1,5 @@
-.product-category-section {
+/* Mining Products Section - Unique Classes */
+.mining-products-section {
   position: relative;
   padding: 80px 0;
   background: linear-gradient(180deg, 
@@ -7,7 +8,7 @@
   overflow: hidden;
 }
 
-.category-background {
+.mining-bg-pattern {
   position: absolute;
   top: 0;
   left: 0;
@@ -17,26 +18,26 @@
   z-index: 0;
 }
 
-.bg-shape {
+.mining-bg-shape {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle, 
-    rgba(255, 107, 0, 0.05) 0%,
-    rgba(255, 107, 0, 0.02) 50%,
-    transparent 70%);
   filter: blur(40px);
-  animation: floatShape 20s infinite ease-in-out;
+  animation: mining-float-shape 20s infinite ease-in-out;
 }
 
-.shape-1 {
+.mining-shape-1 {
   width: 400px;
   height: 400px;
   top: -100px;
   left: -200px;
   animation-delay: 0s;
+  background: radial-gradient(circle, 
+    rgba(255, 107, 0, 0.05) 0%,
+    rgba(255, 107, 0, 0.02) 50%,
+    transparent 70%);
 }
 
-.shape-2 {
+.mining-shape-2 {
   width: 300px;
   height: 300px;
   bottom: -50px;
@@ -48,7 +49,7 @@
     transparent 70%);
 }
 
-.shape-3 {
+.mining-shape-3 {
   width: 200px;
   height: 200px;
   top: 40%;
@@ -60,7 +61,7 @@
     transparent 70%);
 }
 
-.bg-gradient {
+.mining-bg-gradient {
   position: absolute;
   top: 0;
   left: 0;
@@ -72,7 +73,7 @@
     rgba(16, 185, 129, 0.02) 100%);
 }
 
-@keyframes floatShape {
+@keyframes mining-float-shape {
   0%, 100% {
     transform: translate(0, 0) scale(1);
   }
@@ -84,7 +85,7 @@
   }
 }
 
-.container {
+.mining-container {
   position: relative;
   z-index: 1;
   max-width: 1200px;
@@ -93,7 +94,7 @@
 }
 
 /* Section Header */
-.section-header {
+.mining-section-header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +103,7 @@
 }
 
 @media (min-width: 768px) {
-  .section-header {
+  .mining-section-header {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
@@ -110,16 +111,16 @@
   }
 }
 
-.header-content {
+.mining-header-content {
   flex: 1;
 }
 
-.section-badge {
+.mining-section-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: rgba(255, 107, 0, 0.1);
-  color: var(--primary);
+  color: #FF6B00;
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 14px;
@@ -127,41 +128,41 @@
   margin-bottom: 20px;
 }
 
-.section-badge svg {
-  color: var(--primary);
+.mining-section-badge svg {
+  color: #FF6B00;
 }
 
-.section-header h2 {
+.mining-section-title {
   font-size: 42px;
   margin-bottom: 15px;
-  color: var(--dark);
+  color: #1F2937;
   background: linear-gradient(135deg, 
-    var(--dark) 0%,
-    var(--secondary) 100%);
+    #1F2937 0%,
+    #4B5563 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.section-description {
+.mining-section-desc {
   font-size: 18px;
-  color: var(--gray);
+  color: #6B7280;
   max-width: 600px;
   line-height: 1.6;
 }
 
-.header-actions {
+.mining-header-actions {
   margin-top: 20px;
 }
 
 @media (min-width: 768px) {
-  .header-actions {
+  .mining-header-actions {
     margin-top: 0;
   }
 }
 
 /* Categories Grid */
-.category-grid {
+.mining-category-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 30px;
@@ -169,18 +170,18 @@
 }
 
 @media (min-width: 768px) {
-  .category-grid {
+  .mining-category-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .category-grid {
+  .mining-category-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.category-card {
+.mining-category-card {
   position: relative;
   background: white;
   border-radius: 16px;
@@ -192,47 +193,47 @@
   overflow: hidden;
 }
 
-.category-card:hover,
-.category-card.active {
+.mining-category-card:hover,
+.mining-category-card.mining-card-active {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.category-card.primary:hover,
-.category-card.primary.active {
-  border-color: var(--primary);
+.mining-card-primary:hover,
+.mining-card-primary.mining-card-active {
+  border-color: #FF6B00;
 }
 
-.category-card.success:hover,
-.category-card.success.active {
+.mining-card-success:hover,
+.mining-card-success.mining-card-active {
   border-color: #10B981;
 }
 
-.category-card.secondary:hover,
-.category-card.secondary.active {
+.mining-card-secondary:hover,
+.mining-card-secondary.mining-card-active {
   border-color: #4B5563;
 }
 
-.category-card.accent:hover,
-.category-card.accent.active {
+.mining-card-accent:hover,
+.mining-card-accent.mining-card-active {
   border-color: #FBBF24;
 }
 
-.category-card.info:hover,
-.category-card.info.active {
+.mining-card-info:hover,
+.mining-card-info.mining-card-active {
   border-color: #3B82F6;
 }
 
-.category-card.warning:hover,
-.category-card.warning.active {
+.mining-card-warning:hover,
+.mining-card-warning.mining-card-active {
   border-color: #F59E0B;
 }
 
-.category-card.popular {
-  border: 2px solid var(--primary);
+.mining-card-popular {
+  border: 2px solid #FF6B00;
 }
 
-.category-badge {
+.mining-category-badge {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -245,60 +246,65 @@
   z-index: 2;
 }
 
-.category-badge.primary {
+.mining-badge-primary {
   background: rgba(255, 107, 0, 0.1);
-  color: var(--primary);
+  color: #FF6B00;
   border: 1px solid rgba(255, 107, 0, 0.2);
 }
 
-.category-badge.success {
+.mining-badge-success {
   background: rgba(16, 185, 129, 0.1);
   color: #10B981;
   border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
-.category-badge.secondary {
+.mining-badge-secondary {
   background: rgba(75, 85, 99, 0.1);
   color: #4B5563;
   border: 1px solid rgba(75, 85, 99, 0.2);
 }
 
-.category-badge.accent {
+.mining-badge-accent {
   background: rgba(251, 191, 36, 0.1);
   color: #D97706;
   border: 1px solid rgba(251, 191, 36, 0.2);
 }
 
-.category-badge.info {
+.mining-badge-info {
   background: rgba(59, 130, 246, 0.1);
   color: #3B82F6;
   border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
-.category-badge.warning {
+.mining-badge-warning {
   background: rgba(245, 158, 11, 0.1);
   color: #D97706;
   border: 1px solid rgba(245, 158, 11, 0.2);
 }
 
 /* Card Header */
-.card-header {
+.mining-card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 25px;
 }
 
-.category-icon-wrapper {
+.mining-card-header-section {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.mining-icon-container {
   position: relative;
   width: 60px;
   height: 60px;
 }
 
-.category-icon {
+.mining-category-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background: linear-gradient(135deg, #FF6B00, #F59E0B);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -308,31 +314,31 @@
   z-index: 1;
 }
 
-.category-card.primary .category-icon {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+.mining-card-primary .mining-category-icon {
+  background: linear-gradient(135deg, #FF6B00, #F59E0B);
 }
 
-.category-card.success .category-icon {
+.mining-card-success .mining-category-icon {
   background: linear-gradient(135deg, #10B981, #059669);
 }
 
-.category-card.secondary .category-icon {
+.mining-card-secondary .mining-category-icon {
   background: linear-gradient(135deg, #4B5563, #374151);
 }
 
-.category-card.accent .category-icon {
+.mining-card-accent .mining-category-icon {
   background: linear-gradient(135deg, #FBBF24, #F59E0B);
 }
 
-.category-card.info .category-icon {
+.mining-card-info .mining-category-icon {
   background: linear-gradient(135deg, #3B82F6, #1D4ED8);
 }
 
-.category-card.warning .category-icon {
+.mining-card-warning .mining-category-icon {
   background: linear-gradient(135deg, #F59E0B, #D97706);
 }
 
-.icon-glow {
+.mining-icon-glow {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -341,34 +347,34 @@
   height: 70px;
   border-radius: 50%;
   opacity: 0.3;
-  animation: pulseGlow 2s infinite ease-in-out;
+  animation: mining-pulse-glow 2s infinite ease-in-out;
 }
 
-.category-card.primary .icon-glow {
-  background: var(--primary);
+.mining-card-primary .mining-icon-glow {
+  background: #FF6B00;
 }
 
-.category-card.success .icon-glow {
+.mining-card-success .mining-icon-glow {
   background: #10B981;
 }
 
-.category-card.secondary .icon-glow {
+.mining-card-secondary .mining-icon-glow {
   background: #4B5563;
 }
 
-.category-card.accent .icon-glow {
+.mining-card-accent .mining-icon-glow {
   background: #FBBF24;
 }
 
-.category-card.info .icon-glow {
+.mining-card-info .mining-icon-glow {
   background: #3B82F6;
 }
 
-.category-card.warning .icon-glow {
+.mining-card-warning .mining-icon-glow {
   background: #F59E0B;
 }
 
-@keyframes pulseGlow {
+@keyframes mining-pulse-glow {
   0%, 100% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 0.3;
@@ -379,182 +385,185 @@
   }
 }
 
-.category-meta {
+.mining-category-meta {
   text-align: right;
 }
 
-.category-count {
+.mining-category-count {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.count-number {
+.mining-count-number {
   font-size: 32px;
   font-weight: 800;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-.category-card.primary .count-number {
-  color: var(--primary);
+.mining-card-primary .mining-count-number {
+  color: #FF6B00;
 }
 
-.category-card.success .count-number {
+.mining-card-success .mining-count-number {
   color: #10B981;
 }
 
-.category-card.secondary .count-number {
+.mining-card-secondary .mining-count-number {
   color: #4B5563;
 }
 
-.category-card.accent .count-number {
+.mining-card-accent .mining-count-number {
   color: #F59E0B;
 }
 
-.category-card.info .count-number {
+.mining-card-info .mining-count-number {
   color: #3B82F6;
 }
 
-.category-card.warning .count-number {
+.mining-card-warning .mining-count-number {
   color: #D97706;
 }
 
-.count-unit {
+.mining-count-unit {
   font-size: 14px;
-  color: var(--gray);
+  color: #6B7280;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 2px;
 }
 
 /* Card Body */
-.card-body {
+.mining-card-body {
   margin-bottom: 25px;
 }
 
-.card-body h3 {
+.mining-card-title {
   font-size: 20px;
   margin-bottom: 10px;
-  color: var(--dark);
+  color: #1F2937;
 }
 
-.category-description {
-  color: var(--gray);
+.mining-card-desc {
+  color: #6B7280;
   line-height: 1.6;
   margin-bottom: 20px;
   font-size: 15px;
 }
 
-.category-features {
+.mining-features-section {
   margin-bottom: 20px;
 }
 
-.category-features h4 {
+.mining-features-title {
   font-size: 14px;
-  color: var(--dark);
+  color: #1F2937;
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.category-features ul {
+.mining-features-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.category-features li {
+.mining-feature-item {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 8px;
   font-size: 14px;
-  color: var(--gray);
+  color: #6B7280;
 }
 
-.category-features svg {
-  color: var(--primary);
+.mining-features-list svg {
+  color: #FF6B00;
   flex-shrink: 0;
 }
 
-.category-tags {
+.mining-feature-text {
+  flex: 1;
+}
+
+.mining-tags-container {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.tag {
-  background: rgba(var(--primary-rgb), 0.1);
-  color: var(--primary);
+.mining-tag {
+  background: rgba(255, 107, 0, 0.1);
+  color: #FF6B00;
   padding: 4px 10px;
   border-radius: 12px;
   font-size: 12px;
   font-weight: 500;
 }
 
-.category-card.success .tag {
+.mining-card-success .mining-tag {
   background: rgba(16, 185, 129, 0.1);
   color: #10B981;
 }
 
-.category-card.secondary .tag {
+.mining-card-secondary .mining-tag {
   background: rgba(75, 85, 99, 0.1);
   color: #4B5563;
 }
 
-.category-card.accent .tag {
+.mining-card-accent .mining-tag {
   background: rgba(251, 191, 36, 0.1);
   color: #D97706;
 }
 
-.category-card.info .tag {
+.mining-card-info .mining-tag {
   background: rgba(59, 130, 246, 0.1);
   color: #3B82F6;
 }
 
-.category-card.warning .tag {
+.mining-card-warning .mining-tag {
   background: rgba(245, 158, 11, 0.1);
   color: #D97706;
 }
 
 /* Card Footer */
-.card-footer {
-  border-top: 1px solid var(--light-gray);
+.mining-card-footer {
+  border-top: 1px solid #E5E7EB;
   padding-top: 20px;
 }
 
-.footer-content {
+.mining-footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.action-links {
+.mining-action-links {
   display: flex;
   gap: 15px;
 }
 
-.link {
-  color: var(--primary);
+.mining-link {
+  color: #FF6B00;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.link:hover {
-  color: var(--primary-dark);
+.mining-link:hover {
+  color: #D45A00;
   text-decoration: underline;
 }
 
 /* Card Overlay */
-.card-overlay {
+.mining-card-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(var(--primary-rgb), 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -563,28 +572,28 @@
   border-radius: 16px;
 }
 
-.category-card:hover .card-overlay {
+.mining-category-card:hover .mining-card-overlay {
   opacity: 1;
 }
 
-.overlay-content {
+.mining-overlay-content {
   text-align: center;
   color: white;
   padding: 20px;
 }
 
-.overlay-content svg {
+.mining-overlay-content svg {
   margin-bottom: 10px;
-  animation: bounce 2s infinite;
+  animation: mining-bounce 2s infinite;
 }
 
-.overlay-content span {
+.mining-overlay-text {
   font-size: 16px;
   font-weight: 600;
   display: block;
 }
 
-@keyframes bounce {
+@keyframes mining-bounce {
   0%, 100% {
     transform: translateY(0);
   }
@@ -594,7 +603,7 @@
 }
 
 /* Category Navigation */
-.category-navigation {
+.mining-category-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -603,7 +612,7 @@
 }
 
 @media (min-width: 768px) {
-  .category-navigation {
+  .mining-category-nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -611,45 +620,45 @@
   }
 }
 
-.nav-dots {
+.mining-nav-dots {
   display: flex;
   gap: 10px;
 }
 
-.nav-dot {
+.mining-nav-dot {
   width: 10px;
   height: 10px;
-  background: var(--light-gray);
+  background: #E5E7EB;
   border-radius: 50%;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.nav-dot.active {
-  background: var(--primary);
+.mining-nav-dot-active {
+  background: #FF6B00;
   transform: scale(1.3);
 }
 
-.nav-dot:hover {
-  background: var(--primary);
+.mining-nav-dot:hover {
+  background: #FF6B00;
   transform: scale(1.2);
 }
 
-.nav-info {
+.mining-nav-info {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.current-category {
+.mining-current-category {
   font-size: 18px;
   font-weight: 600;
-  color: var(--dark);
+  color: #1F2937;
 }
 
-.category-counter {
-  background: var(--primary);
+.mining-category-counter {
+  background: #FF6B00;
   color: white;
   width: 40px;
   height: 40px;
@@ -660,162 +669,258 @@
   font-weight: 600;
 }
 
-/* Benefits Section */
-.benefits-section {
-  margin-bottom: 60px;
+/* Image styles */
+.mining-category-image {
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
-.benefits-header {
+.mining-category-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mining-category-card:hover .mining-category-img {
+  transform: scale(1.1);
+}
+
+/* Enhanced Benefits Section */
+.mining-benefits-section {
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.mining-benefits-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  position: relative;
 }
 
-.benefits-header h3 {
-  font-size: 32px;
-  margin-bottom: 15px;
-  color: var(--dark);
+.mining-benefits-title {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #1F2937;
+  background: linear-gradient(135deg, 
+    #1F2937 0%,
+    #FF6B00 50%,
+    #4B5563 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.benefits-header p {
-  color: var(--gray);
+.mining-benefits-subtitle {
+  color: #6B7280;
   font-size: 18px;
   max-width: 600px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
-.benefits-grid {
+/* Benefits Grid */
+.mining-benefits-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 30px;
+  margin-bottom: 40px;
 }
 
 @media (min-width: 768px) {
-  .benefits-grid {
+  .mining-benefits-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .benefits-grid {
+  .mining-benefits-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.benefit-card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--light-gray);
-  transition: all 0.3s ease;
+/* Enhanced Benefit Cards */
+.mining-benefit-card {
+  background: linear-gradient(145deg, #ffffff, #f5f7fa);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.benefit-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  border-color: var(--primary);
+.mining-benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #FF6B00, #F59E0B);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
 }
 
-.benefit-icon {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  border-radius: 10px;
+.mining-benefit-card:hover::before {
+  transform: scaleX(1);
+}
+
+.mining-benefit-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(255, 107, 0, 0.15);
+  border-color: #FF6B00;
+}
+
+/* Enhanced Benefit Icon */
+.mining-benefit-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #FF6B00, #F59E0B);
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.mining-benefit-card:hover .mining-benefit-icon {
+  transform: rotate(10deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+}
+
+/* Benefit Content */
+.mining-benefit-content {
+  flex: 1;
+}
+
+.mining-benefit-heading {
+  margin-bottom: 15px;
+  color: #1F2937;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.mining-benefit-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #FF6B00;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.mining-benefit-card:hover .mining-benefit-heading::after {
+  width: 60px;
+}
+
+.mining-benefit-desc {
+  color: #6B7280;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Benefit Card Number */
+.mining-benefit-number {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 48px;
+  font-weight: 900;
+  color: rgba(255, 107, 0, 0.05);
+  font-family: 'Roboto Condensed', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.mining-benefit-card:hover .mining-benefit-number {
+  color: rgba(255, 107, 0, 0.1);
+  transform: scale(1.1);
+}
+
+/* Benefit Stats */
+.mining-stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .mining-stats-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.mining-stat-card {
+  text-align: center;
+  padding: 25px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  flex: 1;
+  min-width: 150px;
+}
+
+.mining-stat-card:hover {
+  transform: translateY(-5px);
+  border-color: #FF6B00;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mining-stat-number {
+  font-size: 36px;
+  font-weight: 800;
+  color: #FF6B00;
+  margin-bottom: 5px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.mining-stat-label {
+  color: #6B7280;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Benefit CTA */
+.mining-benefits-cta {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.mining-cta-text {
+  color: #6B7280;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
-.benefit-content h4 {
-  margin-bottom: 10px;
-  color: var(--dark);
-  font-size: 18px;
-}
-
-.benefit-content p {
-  color: var(--gray);
-  line-height: 1.6;
-  margin: 0;
-  font-size: 15px;
-}
-
 /* CTA Section */
-.category-cta {
-  background: linear-gradient(135deg, var(--dark), var(--secondary));
-  border-radius: 20px;
-  padding: 50px;
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
-
-.category-cta::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 300px;
-  height: 300px;
-}
-/* Add this to the end of your existing ProductCategory.css file */
-
-/* CTA Section Styles */
-.cta-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 30px;
-  padding: 40px;
-}
-
-@media (min-width: 768px) {
-  .cta-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    padding: 50px;
-  }
-}
-
-.cta-text {
-  flex: 1;
-  color: white;
-}
-
-.cta-text h3 {
-  font-size: 32px;
-  margin-bottom: 15px;
-  color: white;
-}
-
-.cta-text p {
-  font-size: 18px;
-  line-height: 1.6;
-  opacity: 0.9;
-  margin: 0;
-}
-
-.cta-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .cta-actions {
-    flex-direction: row;
-    width: auto;
-  }
-}
-
-/* Fix for category-cta background gradient */
-.category-cta {
-  background: linear-gradient(135deg, var(--dark), var(--secondary));
+.mining-main-cta {
+  background: linear-gradient(135deg, #1F2937, #4B5563);
   border-radius: 20px;
   padding: 40px;
   color: white;
@@ -824,7 +929,7 @@
   margin-top: 60px;
 }
 
-.category-cta::before {
+.mining-main-cta::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -835,7 +940,7 @@
   border-radius: 50%;
 }
 
-.category-cta::after {
+.mining-main-cta::after {
   content: '';
   position: absolute;
   bottom: -30%;
@@ -846,39 +951,61 @@
   border-radius: 50%;
 }
 
-/* Make sure buttons in CTA have proper contrast */
-.category-cta .btn-primary {
-  background: white;
-  color: var(--dark);
+/* CTA Content Styles */
+.mining-cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  padding: 40px;
+  position: relative;
+  z-index: 1;
 }
 
-.category-cta .btn-primary:hover {
-  background: rgba(255, 255, 255, 0.9);
+@media (min-width: 768px) {
+  .mining-cta-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 50px;
+  }
 }
 
-.category-cta .btn-secondary {
-  background: transparent;
+.mining-cta-text-section {
+  flex: 1;
   color: white;
-  border-color: white;
 }
 
-.category-cta .btn-secondary:hover {
-  background: white;
-  color: var(--dark);
-}
-
-.category-cta .btn-outline {
-  background: transparent;
+.mining-cta-title {
+  font-size: 32px;
+  margin-bottom: 15px;
   color: white;
-  border-color: rgba(255, 255, 255, 0.3);
 }
 
-.category-cta .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: white;
+.mining-cta-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
 }
 
-/* AOS animations for benefits */
+.mining-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .mining-cta-buttons {
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+/* AOS animations */
 [data-aos] {
   opacity: 0;
   transition-property: opacity, transform;
@@ -889,53 +1016,38 @@
 }
 
 /* Accessibility improvements */
-.category-card:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
-
-.btn:focus {
-  outline: 2px solid var(--primary);
+.mining-category-card:focus {
+  outline: 2px solid #FF6B00;
   outline-offset: 2px;
 }
 
 /* Print styles */
 @media print {
-  .category-background,
-  .icon-glow,
-  .card-overlay,
-  .btn-expand,
-  .nav-dots {
+  .mining-bg-pattern,
+  .mining-icon-glow,
+  .mining-card-overlay,
+  .mining-nav-dots {
     display: none !important;
   }
   
-  .category-card {
+  .mining-category-card {
     break-inside: avoid;
     box-shadow: none !important;
     border: 1px solid #ddd !important;
   }
 }
-/* Add these image styles to ProductCategory.css */
 
-.category-card-header {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.category-image {
-  height: 200px;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.category-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.category-card:hover .category-image img {
-  transform: scale(1.1);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mining-benefits-title {
+    font-size: 32px;
+  }
+  
+  .mining-benefit-card {
+    padding: 30px 20px;
+  }
+  
+  .mining-stat-card {
+    padding: 20px;
+  }
 }

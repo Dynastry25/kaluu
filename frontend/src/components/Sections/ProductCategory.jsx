@@ -1,23 +1,15 @@
 import React, { useState } from 'react'
 import { useLanguage } from '../../contexts/LanguageContext'
-import { 
-  Package, 
-  Shield, 
-  Truck, 
-  Settings, 
-  Zap, 
-  HardHat, 
-  Wrench, 
-  Fuel, 
-  ArrowRight, 
-  ChevronRight,
-  CheckCircle,
-  Star,
-  Award,
-  TrendingUp
-} from 'lucide-react'
 import Button from '../UI/Button'
 import './ProductCategory.css'
+
+// Import images
+import explosive from '../../components/assets/emulsion.jpg'
+import equipment from '../../components/assets/drilling.jpg'
+import equipment2 from '../../components/assets/Excavetor.jpg'
+import equipment3 from '../../components/assets/denator.jpg'
+import equipment4 from '../../components/assets/Blaster.jpg'
+import Safety from '../../components/assets/Danger.jpg'
 
 const ProductCategory = () => {
   const [activeCategory, setActiveCategory] = useState(0)
@@ -71,7 +63,13 @@ const ProductCategory = () => {
       technicalTeamReady: 'Our technical team is ready to help you select the right products for your mining operations.',
       contactSales: 'Contact Sales',
       whyChooseProducts: 'Why Choose Our Products',
-      industryLeadingQuality: 'Industry-leading quality and support'
+      industryLeadingQuality: 'Industry-leading quality and support',
+      customerSatisfaction: 'Customer Satisfaction',
+      supportAvailable: 'Support Available',
+      projectsCompleted: 'Projects Completed',
+      yearsExperience: 'Years Experience',
+      readyToExperience: 'Ready to experience the difference?',
+      scheduleConsultation: 'Schedule a Consultation'
     },
     sw: {
       explosivesTitle: 'Milipuko ya Viwandani',
@@ -120,16 +118,21 @@ const ProductCategory = () => {
       technicalTeamReady: 'Timu yetu ya kiufundi iko tayari kukusaidia kuchagua bidhaa sahihi kwa shughuli zako za uchimbaji madini.',
       contactSales: 'Wasiliana na Mauzo',
       whyChooseProducts: 'Kwa Nini Kuchagua Bidhaa Zetu',
-      industryLeadingQuality: 'Ubora wa kuongoza tasnia na msaada'
+      industryLeadingQuality: 'Ubora wa kuongoza tasnia na msaada',
+      customerSatisfaction: 'Uridhifu wa Wateja',
+      supportAvailable: 'Msaada Unapatikana',
+      projectsCompleted: 'Miradi Imekamilika',
+      yearsExperience: 'Miaka ya Uzoefu',
+      readyToExperience: 'Tayari kujisikia tofauti?',
+      scheduleConsultation: 'Panga Mashauriano'
     }
   }
 
-  const trans = translations[language]
+  const trans = translations[language] || translations.en
 
   const categories = [
     {
       id: 'explosives',
-      icon: <Zap />,
       title: trans.explosivesTitle,
       description: trans.explosivesDesc,
       count: '25+',
@@ -149,11 +152,10 @@ const ProductCategory = () => {
       tags: [trans.certified, trans.bestSeller],
       badge: trans.featured,
       popular: true,
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h-400&fit=crop'
+      image: explosive
     },
     {
       id: 'safety',
-      icon: <HardHat />,
       title: trans.safetyTitle,
       description: trans.safetyDesc,
       count: '50+',
@@ -173,11 +175,10 @@ const ProductCategory = () => {
       tags: [trans.safetyApproved, trans.newArrival],
       badge: trans.newArrival,
       popular: false,
-      image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&h-400&fit=crop'
+      image: Safety
     },
     {
       id: 'equipment',
-      icon: <Truck />,
       title: trans.equipmentTitle,
       description: trans.equipmentDesc,
       count: '100+',
@@ -197,11 +198,10 @@ const ProductCategory = () => {
       tags: [trans.qualityAssured, trans.featured],
       badge: trans.bestSeller,
       popular: true,
-      image: 'https://images.unsplash.com/photo-1570032211195-4221d5d63e4c?w=600&h-400&fit=crop'
+      image: equipment2
     },
     {
       id: 'consumables',
-      icon: <Wrench />,
       title: trans.consumablesTitle,
       description: trans.consumablesDesc,
       count: '200+',
@@ -221,11 +221,10 @@ const ProductCategory = () => {
       tags: [trans.premiumQuality, trans.limitedStock],
       badge: trans.limitedStock,
       popular: false,
-      image: 'https://images.unsplash.com/photo-1564604761388-83eafc96f668?w=600&h-400&fit=crop'
+      image: equipment
     },
     {
       id: 'detonators',
-      icon: <Package />,
       title: trans.detonatorsTitle,
       description: trans.detonatorsDesc,
       count: '40+',
@@ -245,11 +244,10 @@ const ProductCategory = () => {
       tags: [trans.certified, trans.safetyApproved],
       badge: trans.featured,
       popular: true,
-      image: 'https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=600&h-400&fit=crop'
+      image: equipment3
     },
     {
       id: 'accessories',
-      icon: <Settings />,
       title: trans.accessoriesTitle,
       description: trans.accessoriesDesc,
       count: '75+',
@@ -269,158 +267,172 @@ const ProductCategory = () => {
       tags: [trans.qualityAssured, trans.premiumQuality],
       badge: trans.newArrival,
       popular: false,
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h-400&fit=crop'
+      image: equipment4
     }
   ]
 
   const benefits = [
     {
-      icon: <CheckCircle />,
-      title: trans.guaranteedQuality,
-      description: language === 'en' ? 'All products meet international quality standards' : 'Bidhaa zote zinakidhi viwango vya kimataifa vya ubora'
+      id: 'benefit-quality',
+      title: trans.guaranteedQuality || 'Guaranteed Quality',
+      description: language === 'en' 
+        ? 'All products meet international quality standards' 
+        : 'Bidhaa zote zinakidhi viwango vya kimataifa vya ubora'
     },
     {
-      icon: <Shield />,
-      title: trans.safetyApproved,
-      description: language === 'en' ? 'Full compliance with safety regulations' : 'Kufuata kamili kanuni za usalama'
+      id: 'benefit-safety',
+      title: trans.safetyApproved || 'Safety Approved',
+      description: language === 'en' 
+        ? 'Full compliance with safety regulations' 
+        : 'Kufuata kamili kanuni za usalama'
     },
     {
-      icon: <Award />,
-      title: trans.technicalSupport,
-      description: language === 'en' ? 'Expert technical support available 24/7' : 'Msaada wa kiufundi wa wataalamu unapatikana 24/7'
+      id: 'benefit-support',
+      title: trans.technicalSupport || '24/7 Technical Support',
+      description: language === 'en' 
+        ? 'Expert technical support available 24/7' 
+        : 'Msaada wa kiufundi wa wataalamu unapatikana 24/7'
     },
     {
-      icon: <Truck />,
-      title: trans.delivery,
-      description: language === 'en' ? 'Nationwide delivery across Tanzania' : 'Uwasilishaji kitaifa kote Tanzania'
+      id: 'benefit-delivery',
+      title: trans.delivery || 'Nationwide Delivery',
+      description: language === 'en' 
+        ? 'Nationwide delivery across Tanzania' 
+        : 'Uwasilishaji kitaifa kote Tanzania'
     },
     {
-      icon: <Settings />,
-      title: trans.training,
-      description: language === 'en' ? 'Free training on product usage and safety' : 'Mafunzo ya bure juu ya matumizi ya bidhaa na usalama'
+      id: 'benefit-training',
+      title: trans.training || 'Free Training',
+      description: language === 'en' 
+        ? 'Free training on product usage and safety' 
+        : 'Mafunzo ya bure juu ya matumizi ya bidhaa na usalama'
     },
     {
-      icon: <Star />,
-      title: trans.warranty,
-      description: language === 'en' ? 'Comprehensive warranty on all products' : 'Dhamana kamili kwenye bidhaa zote'
+      id: 'benefit-warranty',
+      title: trans.warranty || '1 Year Warranty',
+      description: language === 'en' 
+        ? 'Comprehensive warranty on all products' 
+        : 'Dhamana kamili kwenye bidhaa zote'
     }
   ]
 
   return (
-    <div className="product-category-section">
-      {/* Animated Background */}
-      <div className="category-background">
-        <div className="bg-shape shape-1"></div>
-        <div className="bg-shape shape-2"></div>
-        <div className="bg-shape shape-3"></div>
-        <div className="bg-gradient"></div>
+    <div className="mining-products-section">
+      {/* Background Pattern */}
+      <div className="mining-bg-pattern">
+        <div className="mining-bg-shape mining-shape-1"></div>
+        <div className="mining-bg-shape mining-shape-2"></div>
+        <div className="mining-bg-shape mining-shape-3"></div>
+        <div className="mining-bg-gradient"></div>
       </div>
 
-      <div className="container">
+      <div className="mining-container">
         {/* Section Header */}
-        <div className="section-header">
-          <div className="header-content">
-            <span className="section-badge">
-              <Award size={16} />
+        <div className="mining-section-header">
+          <div className="mining-header-content">
+            <span className="mining-section-badge">
               {trans.featuredProducts}
             </span>
-            <h2>{trans.productRange}</h2>
-            <p className="section-description">
+            <h2 className="mining-section-title">{trans.productRange}</h2>
+            <p className="mining-section-desc">
               {trans.trustedByIndustry}
             </p>
           </div>
           
-          <div className="header-actions">
+          <div className="mining-header-actions">
             <Button variant="outline" size="medium">
               {trans.viewAll}
-              <ArrowRight size={18} />
+              <span className="mining-arrow">→</span>
             </Button>
           </div>
         </div>
 
         {/* Categories Grid */}
-        <div className="category-grid">
+        <div className="mining-category-grid">
           {categories.map((category, index) => (
             <div 
-              key={index} 
-              className={`category-card ${category.color} ${category.popular ? 'popular' : ''} ${index === activeCategory ? 'active' : ''}`}
+              key={category.id} 
+              className={`mining-category-card mining-card-${category.color} ${category.popular ? 'mining-card-popular' : ''} ${index === activeCategory ? 'mining-card-active' : ''}`}
               onClick={() => setActiveCategory(index)}
-              onMouseEnter={() => setActiveCategory(index)}
             >
               {category.badge && (
-                <div className={`category-badge ${category.color}`}>
+                <div className={`mining-category-badge mining-badge-${category.color}`}>
                   {category.badge}
                 </div>
               )}
               
-              <div className="category-card-header">
-                <div className="category-image">
-                  <img 
-                    src={category.image} 
-                    alt={category.title}
-                    loading="lazy"
-                  />
-                </div>
+              {/* Category Image */}
+              <div className="mining-category-image">
+                <img 
+                  src={category.image} 
+                  alt={category.title}
+                  loading="lazy"
+                  className="mining-category-img"
+                />
               </div>
               
-              <div className="card-header">
-                <div className="category-icon-wrapper">
-                  <div className="category-icon">
-                    {category.icon}
+              <div className="mining-card-header">
+                <div className="mining-icon-container">
+                  <div className={`mining-category-icon mining-icon-${category.color}`}>
+                    {category.id === 'explosives' ? '💥' : 
+                     category.id === 'safety' ? '⛑️' :
+                     category.id === 'equipment' ? '🚜' :
+                     category.id === 'consumables' ? '🔧' :
+                     category.id === 'detonators' ? '📦' : '⚙️'}
                   </div>
-                  <div className="icon-glow"></div>
+                  <div className={`mining-icon-glow mining-glow-${category.color}`}></div>
                 </div>
-                <div className="category-meta">
-                  <div className="category-count">
-                    <span className="count-number">{category.count}</span>
-                    <span className="count-unit">{category.unit}</span>
+                <div className="mining-category-meta">
+                  <div className="mining-category-count">
+                    <span className={`mining-count-number mining-number-${category.color}`}>{category.count}</span>
+                    <span className="mining-count-unit">{category.unit}</span>
                   </div>
                 </div>
               </div>
 
-              <div className="card-body">
-                <h3>{category.title}</h3>
-                <p className="category-description">{category.description}</p>
+              <div className="mining-card-body">
+                <h3 className="mining-card-title">{category.title}</h3>
+                <p className="mining-card-desc">{category.description}</p>
                 
-                <div className="category-features">
-                  <h4>{trans.categoryFeatures}</h4>
-                  <ul>
+                <div className="mining-features-section">
+                  <h4 className="mining-features-title">{trans.categoryFeatures}</h4>
+                  <ul className="mining-features-list">
                     {category.features.map((feature, idx) => (
-                      <li key={idx}>
-                        <CheckCircle size={14} />
-                        <span>{feature}</span>
+                      <li key={idx} className="mining-feature-item">
+                        <span className="mining-check-icon">✓</span>
+                        <span className="mining-feature-text">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="category-tags">
+                <div className="mining-tags-container">
                   {category.tags.map((tag, idx) => (
-                    <span key={idx} className="tag">
+                    <span key={idx} className={`mining-tag mining-tag-${category.color}`}>
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="card-footer">
-                <div className="footer-content">
+              <div className="mining-card-footer">
+                <div className="mining-footer-content">
                   <Button variant="primary" size="small">
                     {trans.browse}
-                    <ChevronRight size={16} />
+                    <span className="mining-chevron">›</span>
                   </Button>
-                  <div className="action-links">
-                    <a href="#" className="link">{trans.learnMore}</a>
-                    <a href="#" className="link">{trans.getQuote}</a>
+                  <div className="mining-action-links">
+                    <a href="#" className="mining-link">{trans.learnMore}</a>
+                    <a href="#" className="mining-link">{trans.getQuote}</a>
                   </div>
                 </div>
               </div>
 
               {/* Hover Overlay */}
-              <div className="card-overlay">
-                <div className="overlay-content">
-                  <TrendingUp size={24} />
-                  <span>{trans.explore} {category.title.toLowerCase()}</span>
+              <div className="mining-card-overlay">
+                <div className="mining-overlay-content">
+                  <span className="mining-trend-icon">📈</span>
+                  <span className="mining-overlay-text">{trans.explore} {category.title.toLowerCase()}</span>
                 </div>
               </div>
             </div>
@@ -428,74 +440,118 @@ const ProductCategory = () => {
         </div>
 
         {/* Category Navigation */}
-        <div className="category-navigation">
-          <div className="nav-dots">
+        <div className="mining-category-nav">
+          <div className="mining-nav-dots">
             {categories.map((_, index) => (
               <button
                 key={index}
-                className={`nav-dot ${index === activeCategory ? 'active' : ''}`}
+                className={`mining-nav-dot ${index === activeCategory ? 'mining-nav-dot-active' : ''}`}
                 onClick={() => setActiveCategory(index)}
                 aria-label={`${language === 'en' ? 'View category' : 'Angalia kategoria'} ${index + 1}`}
               />
             ))}
           </div>
-          <div className="nav-info">
-            <span className="current-category">
+          <div className="mining-nav-info">
+            <span className="mining-current-category">
               {categories[activeCategory].title}
             </span>
-            <span className="category-counter">
+            <span className="mining-category-counter">
               {activeCategory + 1}/{categories.length}
             </span>
           </div>
         </div>
 
         {/* Benefits Section */}
-        <div className="benefits-section">
-          <div className="benefits-header">
-            <h3>{trans.whyChooseProducts}</h3>
-            <p>{trans.industryLeadingQuality}</p>
+        <div className="mining-benefits-section">
+          <div className="mining-benefits-header">
+            <h3 className="mining-benefits-title">{trans.whyChooseProducts}</h3>
+            <p className="mining-benefits-subtitle">{trans.industryLeadingQuality}</p>
           </div>
           
-          <div className="benefits-grid">
-            {benefits.map((benefit, index) => (
+          <div className="mining-benefits-grid">
+            {benefits.map((benefit) => (
               <div 
-                key={index} 
-                className="benefit-card"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
+                key={benefit.id} 
+                className="mining-benefit-card"
               >
-                <div className="benefit-icon">
-                  {benefit.icon}
+                <span className="mining-benefit-number">0{benefits.indexOf(benefit) + 1}</span>
+                
+                <div className="mining-benefit-icon">
+                  {benefit.id === 'benefit-quality' ? '✓' : 
+                   benefit.id === 'benefit-safety' ? '🛡️' :
+                   benefit.id === 'benefit-support' ? '📞' :
+                   benefit.id === 'benefit-delivery' ? '🚚' :
+                   benefit.id === 'benefit-training' ? '🎓' : '⭐'}
                 </div>
-                <div className="benefit-content">
-                  <h4>{benefit.title}</h4>
-                  <p>{benefit.description}</p>
+                
+                <div className="mining-benefit-content">
+                  <h4 className="mining-benefit-heading">{benefit.title}</h4>
+                  <p className="mining-benefit-desc">{benefit.description}</p>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Stats Section */}
+          <div className="mining-stats-container">
+            <div className="mining-stat-card">
+              <div className="mining-stat-number">98%</div>
+              <div className="mining-stat-label">
+                {trans.customerSatisfaction}
+              </div>
+            </div>
+            <div className="mining-stat-card">
+              <div className="mining-stat-number">24/7</div>
+              <div className="mining-stat-label">
+                {trans.supportAvailable}
+              </div>
+            </div>
+            <div className="mining-stat-card">
+              <div className="mining-stat-number">1000+</div>
+              <div className="mining-stat-label">
+                {trans.projectsCompleted}
+              </div>
+            </div>
+            <div className="mining-stat-card">
+              <div className="mining-stat-number">15+</div>
+              <div className="mining-stat-label">
+                {trans.yearsExperience}
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mining-benefits-cta">
+            <p className="mining-cta-text">
+              {trans.readyToExperience}
+            </p>
+            <Button variant="primary" size="large">
+              {trans.scheduleConsultation}
+              <span className="mining-arrow">→</span>
+            </Button>
+          </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="category-cta">
-          <div className="cta-content">
-            <div className="cta-text">
-              <h3>{trans.needExpertAdvice}</h3>
-              <p>
+        {/* Main CTA Section */}
+        <div className="mining-main-cta">
+          <div className="mining-cta-wrapper">
+            <div className="mining-cta-text-section">
+              <h3 className="mining-cta-title">{trans.needExpertAdvice}</h3>
+              <p className="mining-cta-desc">
                 {trans.technicalTeamReady}
               </p>
             </div>
-            <div className="cta-actions">
+            <div className="mining-cta-buttons">
               <Button variant="primary" size="large">
                 {trans.getQuote}
               </Button>
               <Button variant="secondary" size="large">
                 {trans.contactSales}
-                <ArrowRight size={20} />
+                <span className="mining-arrow">→</span>
               </Button>
               <Button variant="outline" size="large">
-                <Settings size={20} />
-                {language === 'en' ? 'Technical Support' : 'Msaada wa Kiufundi'}
+                <span className="mining-settings-icon">⚙️</span>
+                {trans.technicalSupport}
               </Button>
             </div>
           </div>

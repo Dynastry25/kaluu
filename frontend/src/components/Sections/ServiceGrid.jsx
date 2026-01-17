@@ -19,6 +19,10 @@ import {
   Cpu
 } from 'lucide-react'
 import Modal from '../UI/Modal'
+import explosive from '../../components/assets/explosive.jpg'
+import equipment from '../../components/assets/Excavetor.jpg'
+import Logistic from '../../components/assets/transport.jpg'
+import Safety from '../../components/assets/safety.jpg'
 import './ServiceGrid.css'
 
 const ServiceGrid = () => {
@@ -153,7 +157,7 @@ const ServiceGrid = () => {
       color: 'primary',
       gradient: 'orange',
       modalImage: 'explosives',
-      serviceImage: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop'
+      serviceImage: explosive
     },
     {
       id: 2,
@@ -198,7 +202,7 @@ const ServiceGrid = () => {
       color: 'secondary',
       gradient: 'blue',
       modalImage: 'equipment',
-      serviceImage: 'https://images.unsplash.com/photo-1570032211195-4221d5d63e4c?w=600&h=400&fit=crop'
+      serviceImage: equipment
     },
     {
       id: 3,
@@ -243,7 +247,7 @@ const ServiceGrid = () => {
       color: 'accent',
       gradient: 'yellow',
       modalImage: 'logistics',
-      serviceImage: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&h=400&fit=crop'
+      serviceImage: Logistic
     },
     {
       id: 4,
@@ -288,7 +292,7 @@ const ServiceGrid = () => {
       color: 'success',
       gradient: 'green',
       modalImage: 'consulting',
-      serviceImage: 'https://images.unsplash.com/photo-1551836026-d5c2c3c3f5b5?w=600&h=400&fit=crop'
+      serviceImage: Safety
     }
   ]
 

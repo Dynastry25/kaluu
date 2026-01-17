@@ -26,8 +26,7 @@ const Footer = () => {
       subscribe: "Subscribe to our newsletter",
       yourEmail: "Your email",
       subscribeBtn: "Subscribe",
-      iso9001: "ISO 9001:2015",
-      tmcLicensed: "TMC Licensed",
+
       safetyCertified: "Safety Certified",
       copyright: `© ${currentYear} KALUU Explosives Company Limited. All rights reserved.`,
       licensed: "Licensed by Tanzania Mining Commission"
@@ -154,18 +153,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="footer-bottom">
-          <div className="certifications">
-            <span className="cert-badge">{trans.iso9001}</span>
-            <span className="cert-badge">{trans.tmcLicensed}</span>
-            <span className="cert-badge">{trans.safetyCertified}</span>
-          </div>
-          <div className="copyright">
-            <p>{trans.copyright}</p>
-            <p>{trans.licensed}</p>
-          </div>
-        </div>
+ 
       </div>
     </footer>
   )
