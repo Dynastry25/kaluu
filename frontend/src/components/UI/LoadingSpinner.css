@@ -1,4 +1,3 @@
-/* src/components/UI/EnhancedLoadingSpinner.css */
 .enhanced-loading-spinner {
   display: flex;
   flex-direction: column;
@@ -200,6 +199,59 @@
   50% { opacity: 1; }
 }
 
+/* Fullscreen Loading Styling */
+.fullscreen-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--light) 0%, #f0f4f8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fullscreen-loading .spinner-wrapper {
+  width: 150px;
+  height: 150px;
+}
+
+.fullscreen-loading .spinner-large .spinner {
+  width: 100px;
+  height: 100px;
+  border-width: 4px;
+}
+
+.fullscreen-loading .spinner-large .spinner-inner {
+  width: 100px;
+  height: 100px;
+  border-width: 4px;
+}
+
+.fullscreen-loading .spinner-message {
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.company-logo-loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.4); }
+  50% { box-shadow: 0 0 0 20px rgba(var(--primary-rgb), 0); }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .spinner-wrapper {
@@ -220,5 +272,25 @@
   .spinner-message {
     font-size: 13px;
     margin-top: 20px;
+  }
+  
+  .fullscreen-loading .spinner-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .fullscreen-loading .spinner-large .spinner {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .fullscreen-loading .spinner-large .spinner-inner {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .company-logo-loading {
+    width: 80px;
+    height: 80px;
   }
 }

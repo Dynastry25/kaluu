@@ -38,9 +38,9 @@ const About = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [counterStats, setCounterStats] = useState({
     years: 0,
-    clients: 0,
     projects: 0,
-    team: 0
+    clients: 0,
+    expertise: 0
   })
   const statsRef = useRef(null)
   const timelineRef = useRef(null)
@@ -52,8 +52,7 @@ const About = () => {
     en: {
       heroTitle: "Building Tanzania's",
       heroTitleHighlight: "Mining Future",
-      heroSubtitle: "For over two decades, KALUU Explosives has been at the forefront of mining solutions, combining expertise with innovation to power Tanzania's mineral wealth.",
-      since: "Since 2000",
+      heroSubtitle: "KALUU EXPLOSIVE CO. LTD - Registered company providing superior and safe services in Tanzania's mining, construction, and professional consulting sectors, specializing in explosives-related activities.",
       watchStory: "Watch Our Story",
       downloadProfile: "Download Company Profile",
       missionTitle: "Our Mission",
@@ -175,18 +174,28 @@ const About = () => {
       yearsExperience: "Years Experience",
       successfulProjects: "Successful Projects",
       expertTeam: "Expert Team",
-      videoTitle: "Our Story",
-      videoDescription: "Discover the journey of KALUU Explosives - from our founding in 2000 to becoming Tanzania's leading provider of mining solutions. Learn about our values, achievements, and vision for the future.",
-      loadingVideo: "Loading video...",
-      fromHumbleBeginnings: "From Humble Beginnings to Industry Leadership"
+      fromHumbleBeginnings: "From Humble Beginnings to Industry Leadership",
+      companyProfile: "KALUU EXPLOSIVE CO. LTD is a privately registered company under the laws of the United Republic of Tanzania. The company was established with the aim of providing superior and safe services in the mining, construction and professional consulting sectors, specifically in activities involving the use of explosives.",
+      briefHistory: "Since its establishment, KALUU EXPLOSIVE CO. LTD has continued to build professional capacity by collaborating with experts with extensive experience in the mining and construction sectors, while adhering to national and international safety and environmental standards.",
+      registrationTitle: "Legal Registration",
+      registrationSubtitle: "Officially registered under Tanzanian law",
+      registrationNumber: "Registration Number",
+      registrationType: "Private Limited Company",
+      jurisdiction: "United Republic of Tanzania",
+      establishmentYear: "Established",
+      servicesTitle: "Service Scope",
+      servicesSubtitle: "Comprehensive services in mining and construction",
+      miningServices: "Mining Sector Services",
+      constructionServices: "Construction Services",
+      professionalConsulting: "Professional Consulting",
+      explosivesManagement: "Explosives Management",
+      blastingTraining: "Blasting Training",
+      technicalAdvisory: "Technical Advisory"
     },
     sw: {
       heroTitle: "Kujenga Tanzania ya",
       heroTitleHighlight: "Siku za Baadaye ya Uchimbaji",
-      heroSubtitle: "Kwa zaidi ya miongo miwili, KALUU Explosives imekuwa mstari wa mbele katika utoaji wa suluhisho za uchimbaji madini, ikichanganya utaalamu na ubunifu kuimarisha utajiri wa madini Tanzania.",
-      since: "Tangu 2000",
-      watchStory: "Tazama Hadithi Yetu",
-      downloadProfile: "Pakua Wasifu wa Kampuni",
+      heroSubtitle: "KALUU EXPLOSIVE CO. LTD - Kampuni iliyosajiliwa ikitoa huduma bora na salama katika sekta ya uchimbaji madini, ujenzi na ushauri wa kitaalamu Tanzania, ikijihusisha kwa ualimu na shughuli zinazohusisha matumizi ya milipuko.",
       missionTitle: "Dhamira Yetu",
       missionDescription: "Kutoa suluhisho salama, zinazotegemewa na za ubunifu za uchimbaji madini zinazoimarisha tasnia ya uchimbaji madini Tanzania huku tukizingatia viwango vya juu zaidi vya utunzaji wa mazingira na ushirikiano wa jamii.",
       visionTitle: "Dira Yetu",
@@ -215,9 +224,6 @@ const About = () => {
       safetyRecord: "Rekodi ya Usalama",
       supportAvailable: "Msaada Unapatikana",
       nationalCoverage: "Ufunzaji wa Kitaifa",
-      milestones: "Hatua Muhimu",
-      timelineTitle: "Safari Yetu Kupitia Muda",
-      timelineSubtitle: "Wakati muhimu ulioshape ukuaji na mafanikio yetu",
       companyFounded: "Kampuni Ilianzishwa",
       foundedDescription: "Ilianza shughuli katika Iramba Singida kwa kuzingatia uchimbaji wa ndani",
       firstOffice: "Ofisi ya kwanza ilianzishwa",
@@ -306,10 +312,23 @@ const About = () => {
       yearsExperience: "Miaka ya Uzoefu",
       successfulProjects: "Miradi Imefanikiwa",
       expertTeam: "Timu ya Wataalam",
-      videoTitle: "Hadithi Yetu",
-      videoDescription: "Gundua safari ya KALUU Explosives - kutoka kuanzishwa kwetu mwaka 2000 hadi kuwa mtoaji wa kuongoza wa Tanzania wa suluhisho za uchimbaji madini. Jifunze kuhusu maadili yetu, mafanikio na dira ya siku zijazo.",
-      loadingVideo: "Inapakia video...",
-      fromHumbleBeginnings: "Kutoka Mwanzo Mnyenyekevu hadi Uongozi wa Tasnia"
+      fromHumbleBeginnings: "Kutoka Mwanzo Mnyenyekevu hadi Uongozi wa Tasnia",
+      companyProfile: "KALUU EXPLOSIVE CO. LTD ni kampuni binafsi iliyosajiliwa kisheria chini ya sheria za Jamhuri ya Muungano wa Tanzania. Kampuni ilianzishwa kwa lengo la kutoa huduma bora na salama katika sekta ya migodini, ujenzi na ushauri wa kitaalamu, hususan katika shughuli zinazohusisha matumizi ya milipuko.",
+      briefHistory: "Tangu kuanzishwa kwake, KALUU EXPLOSIVE CO. LTD imeendelea kujijenga kitaalamu kwa kushirikiana na wataalamu wenye uzoefu mkubwa katika sekta ya migodini na ujenzi, huku ikizingatia viwango vya kitaifa na kimataifa vya usalama na mazingira.",
+      registrationTitle: "Usajili wa Kisheria",
+      registrationSubtitle: "Imeajiliwa rasmi chini ya sheria za Tanzania",
+      registrationNumber: "Namba ya Usajili",
+      registrationType: "Kampuni Binafsi ya Ltd",
+      jurisdiction: "Jamhuri ya Muungano wa Tanzania",
+      establishmentYear: "Imeanzishwa",
+      servicesTitle: "Upeo wa Huduma",
+      servicesSubtitle: "Huduma kamili katika uchimbaji madini na ujenzi",
+      miningServices: "Huduma za Sekta ya Migodini",
+      constructionServices: "Huduma za Ujenzi",
+      professionalConsulting: "Ushauri wa Kitaalamu",
+      explosivesManagement: "Usimamizi wa Milipuko",
+      blastingTraining: "Mafunzo ya Blasting",
+      technicalAdvisory: "Ushauri wa Kiufundi"
     }
   }
 
@@ -318,8 +337,10 @@ const About = () => {
   const values = [
     {
       icon: <Shield />,
-      title: trans.safetyFirst,
-      description: trans.safetyDesc,
+      title: language === 'en' ? "Safety First (Usalama Kwanza)" : "Usalama Kwanza",
+      description: language === 'en' 
+        ? "Safety is our highest priority in all operations" 
+        : "Usalama ndio kipaumbele chetu cha juu katika shughuli zote",
       color: 'primary',
       points: [
         trans.iso45001,
@@ -329,9 +350,25 @@ const About = () => {
       ]
     },
     {
+      icon: <Heart />,
+      title: language === 'en' ? "Integrity & Responsibility (Uadilifu na Uwajibikaji)" : "Uadilifu na Uwajibikaji",
+      description: language === 'en' 
+        ? "Honest and responsible in all our dealings" 
+        : "Mwaminifu na wenye uwajibikaji katika mazungumzo yote yetu",
+      color: 'accent',
+      points: [
+        trans.ethicalPractices,
+        trans.transparentCommunication,
+        trans.environmentalResponsibility,
+        trans.communityEngagement
+      ]
+    },
+    {
       icon: <Award />,
-      title: trans.excellence,
-      description: trans.excellenceDesc,
+      title: language === 'en' ? "Service Quality (Ubora wa Huduma)" : "Ubora wa Huduma",
+      description: language === 'en' 
+        ? "Delivering superior quality and efficient services" 
+        : "Kutoa ubora bora na huduma zenye ufanisi",
       color: 'secondary',
       points: [
         trans.iso9001,
@@ -341,15 +378,31 @@ const About = () => {
       ]
     },
     {
-      icon: <Heart />,
-      title: trans.integrity,
-      description: trans.integrityDesc,
-      color: 'accent',
+      icon: <TrendingUp />,
+      title: language === 'en' ? "Expertise & Innovation (Utaalamu na Ubunifu)" : "Utaalamu na Ubunifu",
+      description: language === 'en' 
+        ? "Professional excellence through continuous innovation" 
+        : "Ubora wa kitaalamu kupitia ubunifu endelevu",
+      color: 'warning',
       points: [
-        trans.ethicalPractices,
-        trans.transparentCommunication,
-        trans.environmentalResponsibility,
-        trans.communityEngagement
+        trans.techAdoption,
+        trans.processOptimization,
+        trans.rndInvestment,
+        trans.industryPartnerships
+      ]
+    },
+    {
+      icon: <Globe />,
+      title: language === 'en' ? "Environmental & Social Respect (Kuheshimu Mazingira na Jamii)" : "Kuheshimu Mazingira na Jamii",
+      description: language === 'en' 
+        ? "Committed to environmental stewardship and community respect" 
+        : "Kujitolea kwa utunzaji wa mazingira na heshima kwa jamii",
+      color: 'info',
+      points: [
+        trans.environmentalCompliance,
+        trans.wasteReduction,
+        trans.energyEfficiency,
+        trans.sustainableSourcing
       ]
     },
     {
@@ -363,81 +416,6 @@ const About = () => {
         trans.support247,
         trans.nationwide
       ]
-    },
-    {
-      icon: <Globe />,
-      title: trans.sustainability,
-      description: trans.sustainabilityDesc,
-      color: 'info',
-      points: [
-        trans.environmentalCompliance,
-        trans.wasteReduction,
-        trans.energyEfficiency,
-        trans.sustainableSourcing
-      ]
-    },
-    {
-      icon: <TrendingUp />,
-      title: trans.innovation,
-      description: trans.innovationDesc,
-      color: 'warning',
-      points: [
-        trans.techAdoption,
-        trans.processOptimization,
-        trans.rndInvestment,
-        trans.industryPartnerships
-      ]
-    }
-  ]
-
-  const milestones = [
-    {
-      year: '2000',
-      title: trans.companyFounded,
-      description: trans.foundedDescription,
-      icon: <Building />,
-      color: 'primary',
-      achievements: [trans.firstOffice, trans.initialTeam, trans.firstContract]
-    },
-    {
-      year: '2005',
-      title: trans.isoCert,
-      description: trans.isoDescription,
-      icon: <Award />,
-      color: 'secondary',
-      achievements: [trans.qualitySystem, trans.processStandard, trans.clientSatisfaction]
-    },
-    {
-      year: '2010',
-      title: trans.nationalExpansion,
-      description: trans.expansionDescription,
-      icon: <Globe />,
-      color: 'accent',
-      achievements: [trans.regionalOffices, trans.nationwideLogistics, trans.increasedClients]
-    },
-    {
-      year: '2015',
-      title: trans.equipmentFleet,
-      description: trans.fleetDescription,
-      icon: <Zap />,
-      color: 'success',
-      achievements: [trans.modernMachinery, trans.maintenanceFacility, trans.operatorTraining]
-    },
-    {
-      year: '2020',
-      title: trans.safetyMilestone,
-      description: trans.safetyDescription,
-      icon: <Shield />,
-      color: 'info',
-      achievements: [trans.zeroIncidents, trans.safetyTraining, trans.industryRecognition]
-    },
-    {
-      year: '2025',
-      title: trans.digitalTransformation,
-      description: trans.digitalDescription,
-      icon: <Compass />,
-      color: 'warning',
-      achievements: [trans.digitalPlatform, trans.realTimeTracking, trans.dataAnalytics]
     }
   ]
 
@@ -500,59 +478,15 @@ const About = () => {
     }
   ]
 
-  const certifications = [
-    {
-      code: 'ISO 9001:2015',
-      title: trans.qualityManagementSystem,
-      issuer: 'International Organization for Standardization',
-      date: '2023',
-      validity: '2026',
-      color: 'blue'
-    },
-    {
-      code: 'ISO 45001:2018',
-      title: trans.occupationalHealth,
-      issuer: 'International Organization for Standardization',
-      date: '2022',
-      validity: '2025',
-      color: 'green'
-    },
-    {
-      code: 'ISO 14001:2015',
-      title: trans.environmentalManagement,
-      issuer: 'International Organization for Standardization',
-      date: '2023',
-      validity: '2026',
-      color: 'teal'
-    },
-    {
-      code: 'TMC LIC-2024',
-      title: trans.tanzaniaMiningCommission,
-      issuer: language === 'en' ? 'Government of Tanzania' : 'Serikali ya Tanzania',
-      date: '2024',
-      validity: '2025',
-      color: 'orange'
-    }
-  ]
-
-  const achievements = [
-    { number: '25+', label: trans.yearsExcellence, icon: <Star /> },
-    { number: '150+', label: trans.teamMembers, icon: <Users /> },
-    { number: '500+', label: trans.projectsCompleted, icon: <BarChart3 /> },
-    { number: '100%', label: trans.safetyRecord, icon: <Shield /> },
-    { number: '24/7', label: trans.supportAvailable, icon: <Clock /> },
-    { number: language === 'en' ? 'National' : 'Kitaifa', label: trans.nationalCoverage, icon: <MapPin /> }
-  ]
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            animateCounter(25, 'years', 2000)
-            animateCounter(150, 'clients', 2000)
-            animateCounter(500, 'projects', 2000)
-            animateCounter(150, 'team', 2000)
+            animateCounter(20, 'years', 2000) // Years since establishment
+            animateCounter(200, 'projects', 2000) // Projects completed
+            animateCounter(50, 'clients', 2000) // Satisfied clients
+            animateCounter(30, 'expertise', 2000) // Expert team members
           }
         })
       },
@@ -569,14 +503,6 @@ const About = () => {
       }
     }
   }, [])
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveTimeline(prev => (prev + 1) % milestones.length)
-    }, 5000)
-
-    return () => clearInterval(interval)
-  }, [milestones.length])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -600,28 +526,12 @@ const About = () => {
     }, duration / steps)
   }
 
-  const nextTimeline = () => {
-    setActiveTimeline(prev => (prev + 1) % milestones.length)
-  }
-
-  const prevTimeline = () => {
-    setActiveTimeline(prev => (prev - 1 + milestones.length) % milestones.length)
-  }
-
   const nextTeam = () => {
     setActiveTeam(prev => (prev + 1) % leadershipTeam.length)
   }
 
   const prevTeam = () => {
     setActiveTeam(prev => (prev - 1 + leadershipTeam.length) % leadershipTeam.length)
-  }
-
-  const handleVideoPlay = () => {
-    setIsLoading(true)
-    setTimeout(() => {
-      setIsLoading(false)
-      setIsVideoModalOpen(true)
-    }, 800)
   }
 
   return (
@@ -640,10 +550,6 @@ const About = () => {
         <div className="container">
           <div className="hero-content">
             <div className="hero-text">
-              <div className="hero-badge">
-                <Shield size={18} />
-                <span>{trans.since}</span>
-              </div>
               <h1>
                 {trans.heroTitle}
                 <br />
@@ -652,32 +558,8 @@ const About = () => {
               <p className="hero-subtitle">
                 {trans.heroSubtitle}
               </p>
-              <div className="hero-actions">
-                <Button variant="primary" size="large" onClick={handleVideoPlay}>
-                  <Play size={20} />
-                  {trans.watchStory}
-                </Button>
-                <Button variant="secondary" size="large">
-                  {trans.downloadProfile}
-                </Button>
-              </div>
             </div>
-            <div className="hero-visual">
-              <div className="hero-image-placeholder">
-                <div className="floating-shape shape-1"></div>
-                <div className="floating-shape shape-2"></div>
-                <div className="hero-stats-preview">
-                  <div className="stat-preview">
-                    <div className="stat-number">{counterStats.years}+</div>
-                    <div className="stat-label">{language === 'en' ? 'Years' : 'Miaka'}</div>
-                  </div>
-                  <div className="stat-preview">
-                    <div className="stat-number">{counterStats.clients}+</div>
-                    <div className="stat-label">{language === 'en' ? 'Clients' : 'Wateja'}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
@@ -719,21 +601,21 @@ const About = () => {
               </p>
               <div className="vision-targets">
                 <div className="target">
-                  <div className="target-icon">🏆</div>
+                  <div className="target-icon"></div>
                   <div className="target-content">
                     <h4>{trans.industryLeader}</h4>
                     <p>{trans.topProvider}</p>
                   </div>
                 </div>
                 <div className="target">
-                  <div className="target-icon">🌍</div>
+                  <div className="target-icon"></div>
                   <div className="target-content">
                     <h4>{trans.regionalExpansion}</h4>
                     <p>{trans.eastAfricaCoverage}</p>
                   </div>
                 </div>
                 <div className="target">
-                  <div className="target-icon">💡</div>
+                  <div className="target-icon"></div>
                   <div className="target-content">
                     <h4>{trans.innovationHub}</h4>
                     <p>{trans.techCenter}</p>
@@ -759,6 +641,18 @@ const About = () => {
           <div className="story-content">
             <div className="story-text">
               <div className="story-paragraph">
+                <h3>{language === 'en' ? 'Company Profile' : 'Wasifu wa Kampuni'}</h3>
+                <p>
+                  {trans.companyProfile}
+                </p>
+              </div>
+              <div className="story-paragraph">
+                <h3>{language === 'en' ? 'Brief History' : 'Historia Fupi'}</h3>
+                <p>
+                  {trans.briefHistory}
+                </p>
+              </div>
+              <div className="story-paragraph">
                 <h3>{trans.beginningTitle}</h3>
                 <p>
                   {trans.beginningContent}
@@ -770,89 +664,74 @@ const About = () => {
                   {trans.growthContent}
                 </p>
               </div>
-              <div className="story-paragraph">
-                <h3>{trans.futureTitle}</h3>
-                <p>
-                  {trans.futureContent}
-                </p>
-              </div>
             </div>
             
-            <div className="story-stats">
-              <div className="stats-grid">
-                {achievements.map((achievement, index) => (
-                  <div key={index} className="achievement-card">
-                    <div className="achievement-icon">
-                      {achievement.icon}
-                    </div>
-                    <div className="achievement-content">
-                      <div className="achievement-number">{achievement.number}</div>
-                      <div className="achievement-label">{achievement.label}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="timeline-section section-padding">
+      {/* Legal Registration */}
+      <section className="registration-section section-padding bg-light">
         <div className="container">
           <div className="section-header">
-            <span className="section-subtitle">{trans.milestones}</span>
-            <h2>{trans.timelineTitle}</h2>
+            <span className="section-subtitle">
+              {language === 'en' ? 'Legal Status' : 'Hali ya Kisheria'}
+            </span>
+            <h2>{trans.registrationTitle}</h2>
             <p className="section-description">
-              {trans.timelineSubtitle}
+              {trans.registrationSubtitle}
             </p>
           </div>
-          
-          <div className="timeline-container" ref={timelineRef}>
-            <div className="timeline-track">
-              {milestones.map((milestone, index) => (
-                <div 
-                  key={index}
-                  className={`timeline-milestone ${index === activeTimeline ? 'active' : ''}`}
-                  onClick={() => setActiveTimeline(index)}
-                >
-                  <div className="milestone-year">{milestone.year}</div>
-                  <div className="milestone-content">
-                    <div className={`milestone-icon ${milestone.color}`}>
-                      {milestone.icon}
-                    </div>
-                    <h3>{milestone.title}</h3>
-                    <p>{milestone.description}</p>
-                    <div className="milestone-achievements">
-                      {milestone.achievements.map((achievement, idx) => (
-                        <div key={idx} className="achievement">
-                          <CheckCircle size={14} />
-                          <span>{achievement}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+          <div className="registration-details">
+            <Card className="registration-card" hover>
+              <div className="registration-info">
+                <div className="detail-item">
+                  <span className="detail-label">{trans.registrationNumber}:</span>
+                  <span className="detail-value">000000000</span>
                 </div>
-              ))}
-            </div>
-            
-            <div className="timeline-controls">
-              <button className="control-btn prev" onClick={prevTimeline}>
-                <ChevronLeft size={24} />
-              </button>
-              <div className="timeline-dots">
-                {milestones.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`timeline-dot ${index === activeTimeline ? 'active' : ''}`}
-                    onClick={() => setActiveTimeline(index)}
-                  />
-                ))}
+                <div className="detail-item">
+                  <span className="detail-label">{trans.registrationType}:</span>
+                  <span className="detail-value">KALUU EXPLOSIVE CO. LTD</span>
+                </div>
+                <div className="detail-item">
+                  <span className="detail-label">{trans.jurisdiction}:</span>
+                  <span className="detail-value">Tanzania</span>
+                </div>
+                <div className="detail-item">
+                  <span className="detail-label">{trans.establishmentYear}:</span>
+                  <span className="detail-value">2000</span>
+                </div>
               </div>
-              <button className="control-btn next" onClick={nextTimeline}>
-                <ChevronRight size={24} />
-              </button>
-            </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Scope */}
+      <section className="services-section section-padding">
+        <div className="container">
+          <div className="section-header">
+            <h2>{trans.servicesTitle}</h2>
+            <p className="section-description">
+              {trans.servicesSubtitle}
+            </p>
+          </div>
+          <div className="services-grid">
+            <Card className="service-card" hover>
+              <Target size={32} />
+              <h3>{trans.miningServices}</h3>
+              <p>{language === 'en' ? 'Specialized services for the mining industry' : 'Huduma maalum kwa tasnia ya migodini'}</p>
+            </Card>
+            <Card className="service-card" hover>
+              <Building size={32} />
+              <h3>{trans.constructionServices}</h3>
+              <p>{language === 'en' ? 'Construction-related blasting services' : 'Huduma za blasting zinazohusiana na ujenzi'}</p>
+            </Card>
+            <Card className="service-card" hover>
+              <Users size={32} />
+              <h3>{trans.professionalConsulting}</h3>
+              <p>{language === 'en' ? 'Expert consulting and advisory services' : 'Huduma za ushauri za kitaalamu'}</p>
+            </Card>
           </div>
         </div>
       </section>
@@ -966,60 +845,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="certifications-section section-padding bg-dark">
-        <div className="container">
-          <div className="section-header light">
-            <span className="section-subtitle">
-              {language === 'en' ? 'Accreditations' : 'Udhibitisho'}
-            </span>
-            <h2>{trans.certificationsTitle}</h2>
-            <p className="section-description">
-              {trans.certificationsSubtitle}
-            </p>
-          </div>
-          
-          <div className="certifications-grid">
-            {certifications.map((cert, index) => (
-              <Card key={index} className={`cert-card ${cert.color}`} hover>
-                <div className="cert-header">
-                  <div className="cert-code">{cert.code}</div>
-                  <div className="cert-badge">
-                    {language === 'en' ? 'Valid' : 'Inathamini'}
-                  </div>
-                </div>
-                <div className="cert-body">
-                  <h3>{cert.title}</h3>
-                  <p className="cert-issuer">{cert.issuer}</p>
-                  <div className="cert-dates">
-                    <div className="date-item">
-                      <span className="date-label">{trans.issued}</span>
-                      <span className="date-value">{cert.date}</span>
-                    </div>
-                    <div className="date-item">
-                      <span className="date-label">{trans.validUntil}</span>
-                      <span className="date-value">{cert.validity}</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="cert-footer">
-                  <Button variant="outline" size="small">
-                    {trans.viewCertificate}
-                  </Button>
-                </div>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="standards-note">
-            <Quote size={24} />
-            <p>
-              {trans.standardsNote}
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="about-cta section-padding">
         <div className="container">
@@ -1038,22 +863,6 @@ const About = () => {
                 </Button>
               </div>
             </div>
-            <div className="cta-visual">
-              <div className="cta-stats">
-                <div className="cta-stat">
-                  <div className="stat-value">{counterStats.years}+</div>
-                  <div className="stat-label">{trans.yearsExperience}</div>
-                </div>
-                <div className="cta-stat">
-                  <div className="stat-value">{counterStats.projects}+</div>
-                  <div className="stat-label">{trans.successfulProjects}</div>
-                </div>
-                <div className="cta-stat">
-                  <div className="stat-value">{counterStats.team}+</div>
-                  <div className="stat-label">{trans.expertTeam}</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -1063,14 +872,14 @@ const About = () => {
         <Modal
           isOpen={true}
           onClose={() => setIsVideoModalOpen(false)}
-          title={trans.videoTitle}
+          title={language === 'en' ? 'Our Story' : 'Hadithi Yetu'}
           size="large"
         >
           <div className="video-modal-content">
             {isLoading ? (
               <div className="video-loading">
                 <LoadingSpinner size="large" />
-                <p>{trans.loadingVideo}</p>
+                <p>{language === 'en' ? 'Loading video...' : 'Inapakia video...'}</p>
               </div>
             ) : (
               <div className="video-wrapper">
@@ -1085,7 +894,9 @@ const About = () => {
             <div className="video-description">
               <h3>{trans.fromHumbleBeginnings}</h3>
               <p>
-                {trans.videoDescription}
+                {language === 'en' 
+                  ? "Discover the journey of KALUU Explosives from a small supply company to Tanzania's leading mining solutions provider."
+                  : "Gundua safari ya KALUU Explosives kutoka kampuni ndogo ya usambazaji hadi mtoaji wa kuongoza wa suluhisho za uchimbaji madini Tanzania."}
               </p>
             </div>
           </div>

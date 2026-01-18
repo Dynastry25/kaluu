@@ -21,31 +21,25 @@ const Header = () => {
   ]
 
   return (
-    <header className="header">
+    <header className="kaluu-header">
       {/* Top Bar */}
-      <div className="top-bar">
+      <div className="kaluu-top-bar">
         <div className="container">
-          <div className="top-bar-content">
-            <div className="contact-info">
-              <div className="contact-item">
+          <div className="kaluu-top-bar-content">
+            <div className="kaluu-contact-info">
+              <div className="kaluu-contact-item">
                 <Phone size={16} color={'white'} fontWeight={600} />
                 <span>+255 123 456 789</span>
               </div>
-              <div className="contact-item">
+              <div className="kaluu-contact-item">
                 <MapPin size={16} color={'white'} fontWeight={600} />
                 <span>Iramba – Singida, Tanzania</span>
               </div>
             </div>
-            <div className="top-bar-actions">
-              <span className="badge">
-                {language === 'en' 
-                  ? 'Licensed by Tanzania Mining Commission' 
-                  : 'Imelicenshwa na Tume ya Uchimbaji Madini Tanzania'
-                }
-              </span>
+            <div className="kaluu-top-bar-actions">
               {/* Language Switcher */}
               <button 
-                className="language-switcher"
+                className="kaluu-language-switcher"
                 onClick={toggleLanguage}
                 aria-label={language === 'en' ? 'Switch to Swahili' : 'Switch to English'}
               >
@@ -58,21 +52,21 @@ const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <div className="main-nav">
+      <div className="kaluu-main-nav">
         <div className="container">
-          <div className="nav-content">
+          <div className="kaluu-nav-content">
             {/* Logo */}
-            <Link to="/" className="logo">
-              <img src={KALUU} className='logo-icon' alt="KALUU Logo" />
+            <Link to="/" className="kaluu-logo">
+              <img src={KALUU} className='kaluu-logo-icon' alt="KALUU Logo" />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="desktop-nav">
+            <nav className="kaluu-desktop-nav">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="nav-link"
+                  className="kaluu-nav-link"
                 >
                   {item.name}
                 </Link>
@@ -80,7 +74,7 @@ const Header = () => {
             </nav>
 
             {/* CTA Button */}
-            <div className="header-actions">
+            <div className="kaluu-header-actions">
               <button className="btn btn-primary">
                 {language === 'en' ? 'Get Quote' : 'Pata Bei'}
               </button>
@@ -88,7 +82,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="mobile-menu-btn"
+              className="kaluu-mobile-menu-btn"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -97,23 +91,23 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="mobile-nav">
+            <div className="kaluu-mobile-nav">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="mobile-nav-link"
+                  className="kaluu-mobile-nav-link"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="mobile-actions">
+              <div className="kaluu-mobile-actions">
                 <button className="btn btn-primary">
                   {language === 'en' ? 'Get Quote' : 'Pata Bei'}
                 </button>
                 <button 
-                  className="btn btn-secondary language-switcher-mobile"
+                  className="btn btn-secondary kaluu-language-switcher-mobile"
                   onClick={toggleLanguage}
                 >
                   <Globe size={18} />

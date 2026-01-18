@@ -1,4 +1,4 @@
-.header {
+.kaluu-header {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -6,13 +6,13 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.top-bar {
+.kaluu-top-bar {
   background: var(--secondar-color);
   color: white;
   padding: 8px 0;
 }
 
-.top-bar-content {
+.kaluu-top-bar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,22 +21,24 @@
   gap: 10px;
 }
 
-.contact-info {
+.kaluu-contact-info {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
-.contact-item span{
+
+.kaluu-contact-item span {
   color: white;
   font-weight: 600;
 }
-.contact-item {
+
+.kaluu-contact-item {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.badge {
+.kaluu-badge {
   background: var(--primary);
   padding: 4px 12px;
   border-radius: 4px;
@@ -46,7 +48,7 @@
 }
 
 /* Language Switcher */
-.language-switcher {
+.kaluu-language-switcher {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -61,51 +63,51 @@
   transition: all 0.3s ease;
 }
 
-.language-switcher:hover {
+.kaluu-language-switcher:hover {
   background: var(--primary);
   border-color: var(--primary);
 }
 
-.language-switcher svg {
+.kaluu-language-switcher svg {
   width: 14px;
   height: 14px;
 }
 
-.main-nav {
+.kaluu-main-nav {
   padding: 16px 0;
 }
 
-.nav-content {
+.kaluu-nav-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
+.kaluu-logo {
   display: flex;
   align-items: center;
   gap: 1px;
   text-decoration: none;
 }
 
-.logo-icon {
+.kaluu-logo-icon {
   position: absolute;
   width: 160px;
   object-fit: contain;
 }
 
-.desktop-nav {
+.kaluu-desktop-nav {
   display: flex;
   gap: 24px;
 }
 
 @media (max-width: 1024px) {
-  .desktop-nav {
+  .kaluu-desktop-nav {
     display: none;
   }
 }
 
-.nav-link {
+.kaluu-nav-link {
   color: var(--dark);
   text-decoration: none;
   font-weight: 500;
@@ -114,11 +116,11 @@
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+.kaluu-nav-link:hover {
   color: var(--primary);
 }
 
-.nav-link::after {
+.kaluu-nav-link::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -129,23 +131,23 @@
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.kaluu-nav-link:hover::after {
   width: 100%;
 }
 
-.header-actions {
+.kaluu-header-actions {
   display: flex;
   gap: 12px;
   align-items: center;
 }
 
 @media (max-width: 1024px) {
-  .header-actions {
+  .kaluu-header-actions {
     display: none;
   }
 }
 
-.mobile-menu-btn {
+.kaluu-mobile-menu-btn {
   display: none;
   background: none;
   border: none;
@@ -155,12 +157,12 @@
 }
 
 @media (max-width: 1024px) {
-  .mobile-menu-btn {
+  .kaluu-mobile-menu-btn {
     display: block;
   }
 }
 
-.mobile-nav {
+.kaluu-mobile-nav {
   display: none;
   flex-direction: column;
   gap: 0;
@@ -170,12 +172,12 @@
 }
 
 @media (max-width: 1024px) {
-  .mobile-nav {
+  .kaluu-mobile-nav {
     display: flex;
   }
 }
 
-.mobile-nav-link {
+.kaluu-mobile-nav-link {
   color: var(--dark);
   text-decoration: none;
   font-weight: 500;
@@ -184,18 +186,18 @@
   transition: color 0.3s ease;
 }
 
-.mobile-nav-link:hover {
+.kaluu-mobile-nav-link:hover {
   color: var(--primary);
 }
 
-.mobile-actions {
+.kaluu-mobile-actions {
   padding: 16px 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.language-switcher-mobile {
+.kaluu-language-switcher-mobile {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -204,26 +206,61 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .top-bar-content {
-    flex-direction: column;
-    align-items: flex-start;
+  .kaluu-top-bar-content {
     gap: 10px;
   }
   
-  .contact-info {
+  .kaluu-contact-info {
     flex-direction: column;
     gap: 5px;
   }
   
-  .badge {
+  .kaluu-badge {
     margin: 5px 0;
   }
   
-  .language-switcher {
+  .kaluu-language-switcher {
     align-self: flex-start;
   }
   
-  .logo-icon {
+  .kaluu-logo-icon {
     width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kaluu-top-bar {
+    padding: 4px;
+  }
+  
+  .kaluu-top-bar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .kaluu-contact-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .kaluu-contact-item span {
+    color: white;
+    font-weight: 600;
+  }
+  
+  .kaluu-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .kaluu-logo-icon {
+    width: 140px;
   }
 }
