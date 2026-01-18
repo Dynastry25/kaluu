@@ -101,12 +101,6 @@
   gap: 24px;
 }
 
-@media (max-width: 1024px) {
-  .kaluu-desktop-nav {
-    display: none;
-  }
-}
-
 .kaluu-nav-link {
   color: var(--dark);
   text-decoration: none;
@@ -141,12 +135,6 @@
   align-items: center;
 }
 
-@media (max-width: 1024px) {
-  .kaluu-header-actions {
-    display: none;
-  }
-}
-
 .kaluu-mobile-menu-btn {
   display: none;
   background: none;
@@ -156,12 +144,6 @@
   padding: 8px;
 }
 
-@media (max-width: 1024px) {
-  .kaluu-mobile-menu-btn {
-    display: block;
-  }
-}
-
 .kaluu-mobile-nav {
   display: none;
   flex-direction: column;
@@ -169,12 +151,6 @@
   padding: 20px 0;
   border-top: 1px solid var(--light-gray);
   margin-top: 16px;
-}
-
-@media (max-width: 1024px) {
-  .kaluu-mobile-nav {
-    display: flex;
-  }
 }
 
 .kaluu-mobile-nav-link {
@@ -204,7 +180,21 @@
   justify-content: center;
 }
 
-/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .kaluu-desktop-nav {
+    display: none;
+  }
+    .kaluu-header-actions {
+    display: none;
+  }
+    .kaluu-mobile-menu-btn {
+    display: block;
+  }
+    .kaluu-mobile-nav {
+    display: flex;
+  }
+}
+
 @media (max-width: 768px) {
   .kaluu-top-bar-content {
     gap: 10px;
@@ -229,38 +219,70 @@
 }
 
 @media (max-width: 480px) {
-  .kaluu-top-bar {
-    padding: 4px;
-  }
-  
-  .kaluu-top-bar-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .kaluu-contact-info {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .kaluu-contact-item span {
-    color: white;
-    font-weight: 600;
-  }
-  
-  .kaluu-contact-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  
-  .kaluu-logo-icon {
-    width: 140px;
-  }
+.kaluu-top-bar {
+  padding: 4px;
+}
+
+.kaluu-top-bar-content {
+  font-size: 12px;
+  gap: 5px;
+}
+
+.kaluu-contact-info {
+  gap: 4px;
+}
+
+.kaluu-badge {
+  background: var(--primary);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+.kaluu-language-switcher {
+  padding: 6px ;
+  font-size: 12px;
+}
+
+.kaluu-main-nav {
+  padding: 16px 0;
+}
+
+
+.kaluu-logo {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  text-decoration: none;
+}
+
+.kaluu-logo-icon {
+  position: absolute;
+  width: 130px;
+  object-fit: contain;
+}
+
+
+
+.kaluu-mobile-menu-btn {
+  display: contents;
+  padding: 8px;
+}
+
+.kaluu-mobile-nav {
+  gap: 0;
+  padding: 4px;
+}
+
+.kaluu-mobile-nav-link {
+  font-weight: 500;
+  padding: 6px ;
+}
+
+.kaluu-mobile-actions {
+  padding: 6px 0;
+  gap: 10px;
+}
+
 }
